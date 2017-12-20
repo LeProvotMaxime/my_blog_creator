@@ -12,7 +12,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Articles
 {
-
+    /**
+     * @ORM\ManyToOne(targetEntity="Categorie")
+     */
+    private $categorie;
     /**
      * @ORM\ManyToOne(targetEntity="Blog")
      */

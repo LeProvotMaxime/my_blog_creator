@@ -13,6 +13,16 @@ use Doctrine\ORM\Mapping as ORM;
 class Avis_article
 {
     /**
+     * @ORM\ManyToOne(targetEntity="Articles")
+     */
+    private $articles;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="user")
+     */
+    private $user;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")

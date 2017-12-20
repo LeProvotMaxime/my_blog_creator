@@ -13,6 +13,10 @@ use Doctrine\ORM\Mapping as ORM;
 class Blog
 {
     /**
+     * @ORM\ManyToOne(targetEntity="User")
+     */
+    private $user;
+    /**
      * @ORM\OneToMany(targetEntity="Articles", mappedBy="articles")
      *
      */

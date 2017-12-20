@@ -13,6 +13,11 @@ use Doctrine\ORM\Mapping as ORM;
 class Categorie
 {
     /**
+     * @ORM\OneToMany(targetEntity="articles", mappedBy="Categorie")
+     */
+    private $articles;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
